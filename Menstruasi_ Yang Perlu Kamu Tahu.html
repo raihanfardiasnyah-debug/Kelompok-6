@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Menstruasi: Yang Perlu Kamu Tahu</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;800&family=Nunito:wght@400;600;700&display=swap">
+<style>
+:root{--bg:#F5F2FB;--surface:#FFFFFF;--ink:#2A2150;--muted:#5E5782;--line:#DDD6EE;--rose:#D13F67;--teal:#1F8F85;--amber:#D9921E;--indigo:#4B3FA8}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--bg:#17132B;--surface:#221C40;--ink:#EEEAFB;--muted:#B5AED6;--line:#3A3260;--rose:#F07A9B;--teal:#4CC2B6;--amber:#F2B34F;--indigo:#9C92F0;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#17132B;--surface:#221C40;--ink:#EEEAFB;--muted:#B5AED6;--line:#3A3260;--rose:#F07A9B;--teal:#4CC2B6;--amber:#F2B34F;--indigo:#9C92F0;color-scheme:dark}
+:root{box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+*,*::before,*::after{box-sizing:inherit}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"Nunito",system-ui,-apple-system,"Segoe UI",sans-serif;font-size:17px;line-height:1.65}
+h1,h2,h3{font-family:"Baloo 2","Nunito",system-ui,sans-serif;line-height:1.15;margin:0 0 .5em}
+h1{font-size:clamp(2.2rem,7vw,3.6rem);font-weight:800}
+h2{font-size:clamp(1.6rem,4.5vw,2.2rem);font-weight:800}
+h3{font-size:1.15rem;font-weight:600}
+p{margin:0 0 1em;max-width:68ch}
+main{max-width:960px;margin:0 auto;padding:0 20px}
+section{padding:44px 0;border-top:1px solid var(--line)}
+.hero{display:grid;gap:28px;padding:36px 0 48px;border-top:0}
+@media(min-width:760px){.hero{grid-template-columns:1fr 1fr;align-items:center}}
+.lead{font-size:1.1rem;color:var(--muted)}
+.ring{width:100%;max-width:300px;margin:0 auto;display:block}
+.seg{cursor:pointer;transition:stroke-width .2s}
+.seg.on{stroke-width:30}
+.btns{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0}
+.btns button{font:inherit;font-weight:700;font-size:.9rem;padding:8px 14px;border-radius:999px;border:2px solid var(--c);background:transparent;color:var(--ink);cursor:pointer}
+.btns button[aria-pressed="true"]{background:var(--c);color:#fff}
+:root:not([data-theme="light"]) .btns button[aria-pressed="true"]{color:#17132B}
+button:focus-visible,summary:focus-visible,a:focus-visible{outline:3px solid var(--indigo);outline-offset:2px}
+.info{background:var(--surface);border-left:6px solid var(--c,var(--rose));padding:14px 18px;border-radius:0 10px 10px 0;min-height:7.5em}
+.info b{display:block;font-family:"Baloo 2",sans-serif;font-size:1.1rem}
+.two{display:grid;gap:28px}
+@media(min-width:760px){.two{grid-template-columns:1fr 1fr}}
+.stats{display:flex;flex-wrap:wrap;gap:12px 32px;margin:10px 0 0;padding:0;list-style:none}
+.stats li{max-width:200px}
+.stats strong{display:block;font-family:"Baloo 2",sans-serif;font-size:1.6rem;color:var(--rose)}
+ul.tick{padding-left:1.2em;margin:0}
+ul.tick li{margin-bottom:.4em}
+.fig{background:var(--surface);border-radius:14px;padding:12px}
+.fig svg{display:block;width:100%;height:auto;max-width:360px;margin:0 auto}
+.fig text{fill:var(--ink);font-family:"Nunito",sans-serif;font-size:13px;font-weight:600}
+figcaption{font-size:.85rem;color:var(--muted);text-align:center;margin-top:6px}
+details{background:var(--surface);border-radius:10px;margin-bottom:10px;padding:0 16px}
+summary{cursor:pointer;font-weight:700;padding:14px 0;list-style-position:outside}
+details p{color:var(--muted)}
+.mitos{color:var(--rose)}
+.fakta{color:var(--teal);font-weight:700}
+.dokter{border-left:6px solid var(--amber);background:var(--surface);padding:18px 22px;border-radius:0 12px 12px 0}
+footer{padding:30px 0 50px;border-top:1px solid var(--line);color:var(--muted);font-size:.9rem}
+@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}.seg{transition:none}}
+</style>
+</head>
+<body>
+<main>
+
+<section class="hero" aria-labelledby="judul">
+  <div>
+    <h1 id="judul">Menstruasi: Yang Perlu Kamu Tahu</h1>
+    <p class="lead">Menstruasi atau haid adalah hal alami pada tubuh perempuan. Pelajari bagaimana siklusnya bekerja. Ketuk bagian cincin atau tombol di bawah ini.</p>
+    <div class="btns" id="btns" role="group" aria-label="Pilih fase siklus"></div>
+    <div class="info" id="info" aria-live="polite"></div>
+  </div>
+  <svg class="ring" viewBox="0 0 200 200" role="img" aria-label="Diagram siklus menstruasi 28 hari dalam empat fase">
+    <circle class="seg" data-i="0" cx="100" cy="100" r="80" fill="none" stroke="var(--rose)" stroke-width="22" stroke-dasharray="89.76 502.65" stroke-dashoffset="0" transform="rotate(-90 100 100)"/>
+    <circle class="seg" data-i="1" cx="100" cy="100" r="80" fill="none" stroke="var(--teal)" stroke-width="22" stroke-dasharray="143.6 502.65" stroke-dashoffset="-89.76" transform="rotate(-90 100 100)"/>
+    <circle class="seg" data-i="2" cx="100" cy="100" r="80" fill="none" stroke="var(--amber)" stroke-width="22" stroke-dasharray="17.95 502.65" stroke-dashoffset="-233.36" transform="rotate(-90 100 100)"/>
+    <circle class="seg" data-i="3" cx="100" cy="100" r="80" fill="none" stroke="var(--indigo)" stroke-width="22" stroke-dasharray="251.3 502.65" stroke-dashoffset="-251.31" transform="rotate(-90 100 100)"/>
+    <text x="100" y="104" text-anchor="middle" font-size="40" font-weight="800" fill="var(--ink)" font-family="Baloo 2, sans-serif">28</text>
+    <text x="100" y="124" text-anchor="middle" font-size="11" fill="var(--muted)" font-family="Nunito, sans-serif">hari (contoh)</text>
+  </svg>
+</section>
+
+<section id="apa" aria-labelledby="h-apa">
+  <h2 id="h-apa">Apa itu menstruasi?</h2>
+  <p>Menstruasi adalah keluarnya darah dan jaringan dari dinding rahim (endometrium) lewat vagina. Setiap bulan, rahim menebalkan dindingnya untuk bersiap menerima sel telur yang dibuahi. Jika tidak terjadi pembuahan, dinding itu luruh dan keluar sebagai darah haid.</p>
+  <ul class="stats">
+    <li><strong>9–15 tahun</strong>Usia haid pertama (menarche) pada umumnya</li>
+    <li><strong>21–35 hari</strong>Panjang siklus pada orang dewasa</li>
+    <li><strong>3–7 hari</strong>Lama darah keluar</li>
+  </ul>
+  <p style="margin-top:14px;color:var(--muted)">Pada remaja, siklus sering belum teratur selama 1–2 tahun pertama. Hal ini wajar.</p>
+</section>
+
+<section id="organ" aria-labelledby="h-organ">
+  <h2 id="h-organ">Organ yang terlibat</h2>
+  <div class="two">
+    <figure class="fig" style="margin:0">
+      <svg viewBox="0 0 320 280" role="img" aria-label="Gambar sederhana organ reproduksi perempuan: dua ovarium, dua tuba falopi, rahim, serviks, dan vagina">
+        <path d="M128 92 Q160 70 192 92 L208 150 Q160 205 112 150 Z" fill="var(--rose)" opacity=".85"/>
+        <path d="M128 98 Q82 66 56 104" fill="none" stroke="var(--indigo)" stroke-width="7" stroke-linecap="round"/>
+        <path d="M192 98 Q238 66 264 104" fill="none" stroke="var(--indigo)" stroke-width="7" stroke-linecap="round"/>
+        <ellipse cx="46" cy="118" rx="22" ry="14" fill="var(--amber)"/>
+        <ellipse cx="274" cy="118" rx="22" ry="14" fill="var(--amber)"/>
+        <rect x="148" y="180" width="24" height="26" rx="8" fill="var(--indigo)"/>
+        <rect x="140" y="204" width="40" height="62" rx="18" fill="var(--teal)" opacity=".8"/>
+        <text x="46" y="154" text-anchor="middle">Ovarium</text>
+        <text x="274" y="154" text-anchor="middle">Ovarium</text>
+        <text x="160" y="52" text-anchor="middle">Tuba falopi</text>
+        <text x="160" y="132" text-anchor="middle" style="fill:#fff">Rahim</text>
+        <text x="190" y="196" >Serviks</text>
+        <text x="190" y="240">Vagina</text>
+      </svg>
+      <figcaption>Ilustrasi sederhana tampak depan (tidak berskala)</figcaption>
+    </figure>
+    <div>
+      <h3>Ovarium (indung telur)</h3>
+      <p>Menyimpan sel telur dan menghasilkan hormon estrogen dan progesteron.</p>
+      <h3>Tuba falopi</h3>
+      <p>Saluran tempat sel telur bergerak dari ovarium menuju rahim.</p>
+      <h3>Rahim (uterus)</h3>
+      <p>Tempat dinding yang menebal lalu luruh saat haid.</p>
+      <h3>Serviks dan vagina</h3>
+      <p>Serviks adalah leher rahim. Vagina adalah jalan keluar darah haid.</p>
+    </div>
+  </div>
+</section>
+
+<section id="gejala" aria-labelledby="h-gejala">
+  <h2 id="h-gejala">Keluhan yang sering muncul</h2>
+  <div class="two">
+    <div>
+      <h3>Sebelum haid (PMS)</h3>
+      <ul class="tick">
+        <li>Perut kembung atau payudara terasa nyeri</li>
+        <li>Mood mudah berubah, mudah tersinggung</li>
+        <li>Mudah lelah, sulit tidur</li>
+        <li>Jerawat muncul, nafsu makan berubah</li>
+      </ul>
+    </div>
+    <div>
+      <h3>Saat haid</h3>
+      <ul class="tick">
+        <li>Kram perut bagian bawah (dismenore) karena rahim berkontraksi</li>
+        <li>Pegal di pinggang atau paha</li>
+        <li>Sakit kepala atau mual ringan</li>
+        <li>Darah keluar, awalnya merah terang atau kecokelatan</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="rawat" aria-labelledby="h-rawat">
+  <h2 id="h-rawat">Merawat diri saat haid</h2>
+  <ul class="tick">
+    <li>Ganti pembalut setiap 4–6 jam, atau lebih cepat jika sudah penuh, agar kulit tidak iritasi dan tetap higienis.</li>
+    <li>Cuci tangan sebelum dan sesudah mengganti pembalut. Bersihkan area kewanitaan dari depan ke belakang.</li>
+    <li>Kompres hangat di perut bawah membantu meredakan kram.</li>
+    <li>Minum air putih cukup, makan bergizi (sayur, buah, lauk berprotein, makanan kaya zat besi).</li>
+    <li>Tetap boleh beraktivitas dan berolahraga ringan seperti jalan kaki atau peregangan.</li>
+    <li>Catat tanggal haid pertama setiap bulan di kalender atau aplikasi agar siklusmu terpantau.</li>
+  </ul>
+</section>
+
+<section id="mitos" aria-labelledby="h-mitos">
+  <h2 id="h-mitos">Mitos dan fakta</h2>
+  <details><summary><span class="mitos">Mitos:</span> Darah haid itu kotor.</summary><p><span class="fakta">Fakta:</span> Darah haid berasal dari lapisan dinding rahim yang luruh. Itu proses tubuh yang alami, bukan tanda kotor.</p></details>
+  <details><summary><span class="mitos">Mitos:</span> Tidak boleh keramas saat haid.</summary><p><span class="fakta">Fakta:</span> Boleh. Mandi dan keramas justru menjaga badan tetap segar dan bersih.</p></details>
+  <details><summary><span class="mitos">Mitos:</span> Tidak boleh olahraga saat haid.</summary><p><span class="fakta">Fakta:</span> Olahraga ringan aman dan bisa membantu mengurangi kram. Dengarkan kondisi tubuhmu.</p></details>
+  <details><summary><span class="mitos">Mitos:</span> Tidak boleh makan makanan dingin atau asam.</summary><p><span class="fakta">Fakta:</span> Tidak ada bukti bahwa makanan dingin atau asam membahayakan saat haid.</p></details>
+  <details><summary><span class="mitos">Mitos:</span> Menstruasi harus selalu tepat 28 hari.</summary><p><span class="fakta">Fakta:</span> Angka 28 hari hanyalah contoh. Panjang siklus tiap orang berbeda dan dapat bergeser karena stres, berat badan, atau kurang tidur.</p></details>
+</section>
+
+<section id="dokter" aria-labelledby="h-dokter">
+  <div class="dokter">
+    <h2 id="h-dokter">Kapan harus ke dokter?</h2>
+    <ul class="tick">
+      <li>Nyeri haid sangat berat sampai tidak bisa sekolah atau beraktivitas.</li>
+      <li>Darah sangat banyak, misalnya pembalut penuh kurang dari 2 jam.</li>
+      <li>Haid berlangsung lebih dari 7 hari.</li>
+      <li>Belum pernah haid sampai usia 15 tahun, atau haid berhenti lebih dari 3 bulan.</li>
+      <li>Ada pendarahan di antara dua siklus.</li>
+    </ul>
+    <p style="margin:12px 0 0">Bicaralah dengan orang tua, guru, atau tenaga kesehatan yang kamu percaya.</p>
+  </div>
+</section>
+
+<footer>
+  <p><strong>Referensi yang bisa dicek:</strong> Kementerian Kesehatan Republik Indonesia, WHO (World Health Organization), dan ACOG (American College of Obstetricians and Gynecologists).</p>
+  <p>Halaman ini untuk keperluan belajar dan bukan pengganti saran dokter.</p>
+</footer>
+
+</main>
+<script>
+(function(){
+  var fase=[
+    {n:"Fase menstruasi",h:"Hari 1–5",c:"--rose",t:"Dinding rahim yang menebal dan tidak dibuahi luruh, lalu keluar lewat vagina bersama darah. Inilah yang disebut haid. Kadar estrogen dan progesteron sedang rendah."},
+    {n:"Fase folikular",h:"Hari 6–13",c:"--teal",t:"Hormon FSH merangsang ovarium mematangkan folikel yang berisi sel telur. Estrogen naik dan dinding rahim mulai menebal lagi."},
+    {n:"Ovulasi",h:"Hari 14",c:"--amber",t:"Satu sel telur matang dilepaskan dari ovarium dan masuk ke tuba falopi. Pada masa subur ini peluang terjadinya kehamilan paling tinggi."},
+    {n:"Fase luteal",h:"Hari 15–28",c:"--indigo",t:"Progesteron naik untuk menyiapkan rahim. Jika sel telur tidak dibuahi, hormon turun dan siklus baru dimulai. Pada fase ini sebagian orang mengalami PMS."}
+  ];
+  var btns=document.getElementById("btns"),info=document.getElementById("info"),segs=document.querySelectorAll(".seg");
+  function pilih(i){
+    var f=fase[i];
+    info.style.setProperty("--c","var("+f.c+")");
+    info.innerHTML="<b></b><span class=\"t\"></span>";
+    info.firstChild.textContent=f.n+" ("+f.h+")";
+    info.lastChild.textContent=f.t;
+    Array.prototype.forEach.call(btns.children,function(b,k){b.setAttribute("aria-pressed",k===i?"true":"false")});
+    segs.forEach(function(s,k){s.classList.toggle("on",k===i)});
+  }
+  fase.forEach(function(f,i){
+    var b=document.createElement("button");
+    b.type="button";b.textContent=f.n;b.style.setProperty("--c","var("+f.c+")");
+    b.addEventListener("click",function(){pilih(i)});
+    btns.appendChild(b);
+  });
+  segs.forEach(function(s){s.addEventListener("click",function(){pilih(+s.getAttribute("data-i"))})});
+  pilih(0);
+})();
+</script>
+</body>
+</html>
